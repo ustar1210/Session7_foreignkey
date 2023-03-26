@@ -32,12 +32,13 @@ def signup(request):
         if request.POST['password'] == request.POST['confirm']:
             #user를 만든다. username과 password는 각각 사용자가 입력한 값을 준다.
             user = User.objects.create_user(
-                username=request.POST['username'], 
+                username=request.POST['username'],
                 password=request.POST['password']
                 
                 )
-            nickname=request.POST['nickname'],
-            department=request.POST['department'],
+            
+            nickname=request.POST['nickname']
+            department=request.POST['department']
             
             profile = Profile(user=user, nickname=nickname, department=department)
             profile.save()
