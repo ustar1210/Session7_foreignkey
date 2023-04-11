@@ -6,7 +6,8 @@
 <form action="{%url 'main:create'%}" method="POST" enctype="multipart/form-data">
     {%csrf_token%}
     <p>제목 : <input type="text" name="title"></p>
-    <p>작성자 : <input type="text" name="writer"></p>
+    <!-- form에 작성자 입력받을 필요 이제 없다! -->
+    <!--<p>작성자 : <input type="text" name="writer"></p>-->
     <p> 사진 : <input type="file" name="image"></p>
     <p>내용 : <textarea type="text" name="body" id="" cols="30" rows="10"></textarea></p>
     <button type="submit">제출</button>
