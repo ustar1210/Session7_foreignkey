@@ -32,4 +32,4 @@ class Comment(models.Model):
     blog = models.ForeignKey(Blog, null=False, blank=False, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.blog+" : "+self.content[:20]
+        return self.blog.title+" : "+self.content[:20]
